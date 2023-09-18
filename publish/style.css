@@ -1,6 +1,48 @@
+h1 {
+	margin-bottom: 10px;
+}
+div.link {
+	margin-top: 10px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid gray;
+	padding-bottom: 10px;
+}
+span.link_element {
+	display: inline-block;
+	margin: 0 10px;
+}
 table {
 	border-collapse: collapse;
 }
+col.long {
+	background-color: #d0e0e3;
+}
+col.short {
+	background-color: #fce5cd;
+}
+tr:hover {
+	background-color: lightgray;
+}
 td {
 	border: 1px solid black;
+	padding: 0 2px;
+}
+td.contest_title {
+	max-width: 6em;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+thead td {
+	background-color: #EEE;
+	text-align: center;
+}
+td.place {
+	text-align: center;
+}
+td.score {
+	text-align: center;
+}
+td.total {
+	border-left: 3px double black;
 }

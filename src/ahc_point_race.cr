@@ -106,22 +106,34 @@ def output(year : Int32, years : Array(Int32), contests : Array(Contest), person
       body do
         h1 { text "AtCoder Heuristic Race Ranking (Unofficial) - #{year}" }
         html "\n"
-        p {
+        div(class: "link") {
+          span(class: "link_element") { a(href: "https://github.com/tomerun/ahc_point_race") { text "GitHub" } }
+          span { text "|" }
           years.each do |y|
             next if y == year
-            a(href: "./#{y}.html") { text y.to_s }
+            span(class: "link_element") { a(href: "./#{y}.html") { text y.to_s } }
           end
         }
         html "\n"
         table {
+          tag ("colgroup") {
+            tag("col") { } # place
+            tag("col") { } # name
+            contests.each do |contest|
+              tag("col", class: contest.is_long ? "long" : "short") { }
+            end
+            tag("col") { } # total
+            tag("col") { } # participate
+            tag("col") { } # average
+          }
           thead {
             tr {
               td { text "place" }
               td { text "name" }
               contests.each do |contest|
-                td { a(href: "https://atcoder.jp/contests/#{contest.name}") { text contest.name } }
+                td(class: "contest_title") { a(href: "https://atcoder.jp/contests/#{contest.name}") { text contest.name } }
               end
-              td { text "total" }
+              td(class: "total") { text "total" }
               td { text "participate" }
               td { text "average" }
             }
@@ -130,12 +142,12 @@ def output(year : Int32, years : Array(Int32), contests : Array(Contest), person
           tbody {
             persons.each.with_index do |p, i|
               tr {
-                td { text (i + 1).to_s }
+                td(class: "place") { text (i + 1).to_s }
                 td { a(href: "https://atcoder.jp/users/#{p.name}?contestType=heuristic") { text p.name } }
                 contests.size.times do |j|
-                  td { text p[j] }
+                  td(class: "score") { text p[j] }
                 end
-                td do
+                td(class: "score total") do
                   s = p.sum
                   if s == s.to_i
                     text s.to_i.to_s
@@ -143,12 +155,8 @@ def output(year : Int32, years : Array(Int32), contests : Array(Contest), person
                     text sprintf("%.2f", s)
                   end
                 end
-                td { text p.count_participate.to_s }
-                if p.count_participate == 0
-                  td { text "-" }
-                else
-                  td { text sprintf("%.3f", p.ave) }
-                end
+                td(class: "score") { text p.count_participate.to_s }
+                td(class: "score") { text p.count_participate == 0 ? "-" : sprintf("%.3f", p.ave) }
               }
               html "\n"
             end
