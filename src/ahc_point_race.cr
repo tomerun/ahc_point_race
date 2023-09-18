@@ -99,6 +99,7 @@ def output(year : Int32, years : Array(Int32), contests : Array(Contest), person
     html() do
       head do
         title { text "AtCoder Heuristic Race Ranking (Unofficial)" }
+        tag("meta", charset: "UTF-8") { }
         # meta(charset: "UTF-8")
         link(href: "./style.css", rel: "stylesheet")
       end
@@ -162,7 +163,6 @@ def output(year : Int32, years : Array(Int32), contests : Array(Contest), person
             end
           }
         }
-        # a(href: "http://crystal-lang.org") { text "Crystal rocks!" }
       end
     end
   end
@@ -190,29 +190,3 @@ def main
 end
 
 main
-
-# ps = Hash(String, Array(Int32?)).new { |h, k| h[k] = [] of Int32? }
-# CONTEST_IDS.each.with_index do |contest_id, i|
-#   json = JSON.parse(File.read("data/#{contest_id}.json"))
-#   json["StandingsData"].as_a.each do |p|
-#     next if !p["IsRated"].as_bool
-#     name = p["UserScreenName"].as_s
-#     rank = p["Rank"].as_i
-#     point = rank <= 30 ? GP30[rank - 1] : 0
-#     pa = ps[name]
-#     while pa.size < i
-#       pa << nil
-#     end
-#     pa << point
-#   end
-# end
-# puts "name\t#{CONTEST_IDS.join("\t")}\ttotal\tparticipate\taverage"
-# ps.to_a.sort_by { |p| -p[1].sum { |v| v ? v : 0 } }.each do |p|
-#   points = p[1].map { |v| v.nil? ? '-' : v }
-#   while points.size < CONTEST_IDS.size
-#     points << '-'
-#   end
-#   total = p[1].sum { |v| v.nil? ? 0 : v }
-#   participate = p[1].count { |v| !v.nil? }
-#   puts "#{p[0]}\t#{points.join('\t')}\t#{total}\t#{participate}\t#{total/participate}"
-# end
