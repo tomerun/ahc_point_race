@@ -1,0 +1,81 @@
+2021:
+  - name: "ahc001"
+    writer: []
+    long: true
+  - name: "ahc002"
+    writer: []
+    long: false
+  - name: "ahc003"
+    writer: []
+    long: true
+  - name: "ahc004"
+    writer: []
+    long: false
+  - name: "ahc005"
+    writer: []
+    long: false
+  - name: "rcl-contest-2021-long"
+    writer: ["dpforest", "eha", "japlj", "roiti", "shichinomiya", "shiratty8", "sugim48", "suzume", "TangentDay", "Ti11192916", "tomerun"]
+    long: true
+  - name: "future-contest-2022-qual"
+    writer: ["tsukammo"] 
+    long: true
+  - name: "ahc006"
+    writer: []
+    long: false
+  - name: "ahc007"
+    writer: []
+    long: false
+2022:
+  - name: "ahc008"
+    writer: []
+    long: true
+  - name: "ahc009"
+    writer: []
+    long: false
+  - name: "ahc010"
+    writer: []
+    long: false
+  - name: "ahc011"
+    writer: []
+    long: true
+  - name: "ahc012"
+    writer: []
+    long: false
+  - name: "ahc013"
+    writer: ["dpforest", "eha", "japlj", "roiti", "shichinomiya", "shiratty8", "sugim48", "suzume", "TangentDay", "Ti11192916", "tomerun", "yupiteru", "yusk"]
+    long: true
+  - name: "ahc014"
+    writer: []
+    long: true
+  - name: "ahc015"
+    writer: ["chokudai"]
+    long: false
+  - name: "ahc016"
+    writer: ["tsukammo" , "dchular"]
+    long: true
+2023:
+  - name: "ahc017"
+    writer: []
+    long: true
+  - name: "ahc018"
+    writer: ["dpforest", "eha", "japlj", "roiti", "shichinomiya", "shiratty8", "sugim48", "suzume", "TangentDay", "Ti11192916", "tomerun", "yupiteru", "yusk"]
+    long: true
+  - name: "ahc019"
+    writer: []
+    long: true
+  - name: "ahc020"
+    writer: ["terry_u16"]
+    long: false
+  - name: "ahc021"
+    writer: []
+    long: false
+  - name: "ahc022"
+    writer: ["cozy_sauna", "dpforest", "eha", "FLOPPY_30", "hamray", "japlj", "kanra824", "kys", "n_knuu", "Naccan", "roiti", "shichinomiya", "shiratty8", "smiken", "sugim48", "suzume", "TangentDay", "Ti11192916", "tomerun", "yupiteru", "yusk"]
+    long: true
+  - name: "toyota2023summer-final"
+    writer: []
+    long: false
+  - name: "ahc023"
+    writer: ["c7c7", "iaNTU", "kozima", "niuez"]
+    long: true

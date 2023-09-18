@@ -1,0 +1,7 @@
+/.shards/
+*.dwarf
+/bin/
+/data/*.json
+/docs/
+/lib/
+publish/*.html

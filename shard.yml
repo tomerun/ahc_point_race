@@ -1,0 +1,17 @@
+name: ahc_point_race
+version: 0.1.0
+
+authors:
+  - tomerun <tomerunmail@gmail.com>
+
+targets:
+  ahc_point_race:
+    main: src/ahc_point_race.cr
+
+dependencies:
+  html_builder:
+    github: crystal-lang/html_builder
+
+crystal: 1.7.2
+
+license: MIT
