@@ -35,6 +35,12 @@ class Person
     return @scores.any? { |v| v.is_a?(Writer) || (v.is_a?(Int32) && v.as(Int32) > 0) }
   end
 
+  def conclude(size)
+    while @scores.size < size
+      @scores << nil
+    end
+  end
+
   def add_score(v, idx)
     while @scores.size < idx
       @scores << nil
@@ -90,7 +96,9 @@ def load_persons(contests : Array(Contest)) : Array(Person)
       p.add_score(Writer.new, i)
     end
   end
-  return ps.values.select(&.is_ranker?)
+  rankers = ps.values.select(&.is_ranker?)
+  rankers.each { |p| p.conclude(contests.size) }
+  return rankers
 end
 
 def output(year : Int32, years : Array(Int32), contests : Array(Contest), persons : Array(Person))
