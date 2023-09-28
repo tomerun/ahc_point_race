@@ -119,8 +119,11 @@ def output(year : Int32, years : Array(Int32), contests : Array(Contest), person
           span(class: "link_element") { a(href: "https://github.com/tomerun/ahc_point_race") { text "GitHub" } }
           span { text "|" }
           years.each do |y|
-            next if y == year
-            span(class: "link_element") { a(href: "./#{y}.html") { text y.to_s } }
+            if y == year
+              span(class: "link_element") { text y.to_s }
+            else
+              span(class: "link_element") { a(href: "./#{y}.html") { text y.to_s } }
+            end
           end
         }
         html "\n"
