@@ -79,3 +79,6 @@
   - name: "ahc023"
     writer: ["c7c7", "iaNTU", "kozima", "niuez"]
     long: true
+  - name: "ahc024"
+    writer: []
+    long: false
