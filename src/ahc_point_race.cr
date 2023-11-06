@@ -55,6 +55,7 @@ class Person
   def sum
     sum = sum_raw
     writer = @scores.count { |v| v.is_a?(Writer) }
+    return 0.0 if @scores.size == writer
     return sum + sum / (@scores.size - writer) * writer
   end
 
