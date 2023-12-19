@@ -88,3 +88,6 @@
   - name: "ahc026"
     writer: []
     long: false
+  - name: "ahc027"
+    writer: ["tsukammo", "marroncastle917", "riantkb", "tanzaku", "platinum", "shamal_ref"]
+    long: true
